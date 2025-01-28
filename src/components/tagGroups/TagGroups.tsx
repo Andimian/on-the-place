@@ -1,8 +1,9 @@
 import { DndContext, DragEndEvent } from '@dnd-kit/core';
 import { arrayMove } from '@dnd-kit/sortable';
 import { useState } from 'react';
-import initialGroups from './initialGroups';
-import { DroppableGroup } from './Dropable.tsx';
+import initialGroups from '../initialGroups.ts';
+import { DroppableGroup } from '../Dropable.tsx';
+import styles from './tagGroups.module.scss';
 
 const TagGroups = () => {
 	const [groups, setGroups] = useState(initialGroups);
@@ -69,7 +70,7 @@ const TagGroups = () => {
 
 	return (
 		<DndContext onDragEnd={handleDrop}>
-			<div style={{ display: 'flex', gap: '16px' }}>
+			<div className={styles.wrapper}>
 				{groups.map(group => (
 					<DroppableGroup key={group.id} group={group} />
 				))}

@@ -1,8 +1,15 @@
-import { useDroppable } from "@dnd-kit/core";
-import { DraggableTag, Group } from "./Draggable";
+import { useDroppable } from '@dnd-kit/core';
+import { ITagsGroup } from './template-tags/private-template-tag-settings-modal.tsx';
 import { rectSwappingStrategy, SortableContext } from '@dnd-kit/sortable';
+import { DraggableTag } from './Tag.tsx';
 
-export const DroppableGroup = ({ group }: { group: Group }) => {
+interface IProps {
+	group: ITagsGroup
+}
+
+export const TagsGroupContainer = ({
+	group,
+}: IProps) => {
 	const { isOver, setNodeRef } = useDroppable({
 		id: group.id,
 	});
@@ -32,4 +39,3 @@ export const DroppableGroup = ({ group }: { group: Group }) => {
 		</div>
 	);
 };
-

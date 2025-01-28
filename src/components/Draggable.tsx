@@ -24,14 +24,14 @@ export const DraggableTag = ({ tag, groupId }: { tag: Tag; groupId: string }) =>
 				cursor: 'move',
 			}}
 		>
-			{tag.label}
+			{tag.name}
 		</div>
 	);
 };
 
 export type Tag = {
 	id: string;
-	label: string;
+	name: string;
 };
 
 export type Group = {
