@@ -3,6 +3,7 @@ import TagGroups from './components/tagGroups/TagGroups.tsx';
 import { PrivateTemplateTagSettingsModal } from './components/template-tags/private-template-tag-settings-modal.tsx';
 import { DrawerExample } from './components/drawler/Drawer.story.tsx';
 import { Sortable } from './components/drawler/Sortable.tsx';
+import { SortableTree } from './components/Tree/SortableTree.tsx';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
 				porttitor at.
 			</p>
 		</DrawerExample>
+		<SortableTree/>
     </>
   )
 }
